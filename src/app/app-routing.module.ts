@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'pickup-location',
+    loadChildren: () => import('./pickup-location/pickup-location.module').then( m => m.PickupLocationPageModule)
   }
 ];
 
