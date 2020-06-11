@@ -1,0 +1,25 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+</ion-content> -->
+<mat-card class="login-card">
+  <form class="login-form">
+    <mat-form-field class="login-field" appearance="fill" >
+      <mat-label>Usuario:</mat-label>
+      <input matInput required [(ngModel)] = "user.name">
+      <!-- <mat-hint>Es un campo obligatorio</mat-hint> -->
+    </mat-form-field> 
+    <br>
+    <mat-form-field class="login-field" appearance="fill">
+      <mat-label>Contraseña:</mat-label>
+      <input matInput required type="password" [(ngModel)] = "user.password">
+      <!-- <mat-hint>Es un campo obligatorio</mat-hint> -->
+    </mat-form-field> 
+    <br>
+    <button mat-button color="primary">Iniciar sesión</button>
+  </form>
+</mat-card>

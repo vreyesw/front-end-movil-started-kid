@@ -1,0 +1,10 @@
+.login-card {
+  vertical-align: middle;
+  .login-form {
+    width: 100%;
+
+    .login-field {
+      width: inherit;
+    }
+  }
+}
