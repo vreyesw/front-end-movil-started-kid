@@ -1,5 +1,7 @@
 {
   "name": "startedKid",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
