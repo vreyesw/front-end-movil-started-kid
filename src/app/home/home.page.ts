@@ -11,6 +11,7 @@ export class HomePage {
   pickupLocation: string;
   // The constructor below was changed
   constructor(private router: Router, private route: ActivatedRoute) {
+    // obtener parametros que recive de la redireccion
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.pickupLocation = this.router.getCurrentNavigation().extras.state.pickupLocation;
@@ -20,7 +21,7 @@ export class HomePage {
   }
 
   onpickupClick() {
-    this.router.navigate(['pickup-location']);
+    this.router.navigate(['view-map']);
   }
 
 }

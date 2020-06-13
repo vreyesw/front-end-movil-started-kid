@@ -1,7 +1,7 @@
 {
-  "name": "startedKid",
+  "name": "geo-movil",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Vladimir Reyes",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -61,7 +61,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "protractor": "^7.0.0",
+    "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
@@ -77,7 +77,9 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-nativegeocoder": {}
+      "cordova-plugin-nativegeocoder": {
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service"
+      }
     },
     "platforms": [
       "android",

@@ -9,7 +9,7 @@ import { LoginPageRoutingModule } from './login-routing.module';
 import { LoginPage } from './login.page';
 
 /** importar los modulos de angular material que se utilizaran */
-import { AppMaterialModule } from '../app-material.module'; 
+import { AppMaterialModule } from '../app-material.module';
 
 @NgModule({
   imports: [
@@ -21,4 +21,4 @@ import { AppMaterialModule } from '../app-material.module';
   ],
   declarations: [LoginPage]
 })
-export class LoginPageModule {}
+export class LoginPageModule { }
