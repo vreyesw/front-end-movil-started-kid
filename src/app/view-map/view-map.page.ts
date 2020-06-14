@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 
-import { Map, tileLayer, marker } from 'leaflet';
 import { NativeGeocoder, NativeGeocoderOptions } from "@ionic-native/native-geocoder/ngx";
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
+import { Map, tileLayer, marker } from 'leaflet';
 
 @Component({
   selector: 'app-view-map',
@@ -15,9 +17,19 @@ export class ViewMapPage implements OnInit {
   newMarker: any;
   address: string[];
 
-  constructor(private geocoder: NativeGeocoder, private router: Router) { }
+  constructor(private geocoder: NativeGeocoder, private router: Router, private androidPermissions: AndroidPermissions) { }
 
   ngOnInit() {
+    // this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION).then(
+    //   result => console.log('Has permission?', result.hasPermission),
+    //   err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION)
+    // );
+    // this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_BACKGROUND_LOCATION).then(
+    //   result => console.log('Has permission?', result.hasPermission),
+    //   err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.ACCESS_BACKGROUND_LOCATION)
+    // );
+    // this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.ACCESS_BACKGROUND_LOCATION, this.androidPermissions.PERMISSION.ACCESS_FINE_LOCATION]);
+
     this.loadMap();
   }
 
