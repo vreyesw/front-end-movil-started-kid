@@ -1,0 +1,43 @@
+<ion-header>
+  <mat-toolbar color="primary">
+    <mat-icon (click)="goBack()" >arrow_back</mat-icon>
+    <span>Geo Movil Map</span>
+  </mat-toolbar>
+</ion-header>
+<ion-content>
+  <div fxLayout="row">
+    <div fxLayout="row">
+      <mat-form-field  style="width: 80%;">
+        <mat-label>
+          <mat-icon>location_searching</mat-icon>
+          Dirección
+        </mat-label>
+        <input matInput  [(ngModel)]="address">
+      </mat-form-field>
+      <button mat-button  style="width: 20%;" color="primary" (click)="confirmPickupLocation()">Ir</button>
+    </div>
+    <div fxLayout="row" >
+      <button mat-button color="secundary" style="width: 100%;"(click)="locatePosition()" >
+        <mat-icon>map</mat-icon>
+        Mi posision
+      </button>
+    </div>
+    <div fxLayout="row">
+      <div id="mapId" class="map" style="width: 200%; height: 300px;"></div>
+    </div>
+  </div>
+
+  <!-- <ion-item style="cursor: pointer" (click)="locatePosition()">
+    <ion-button fill="clear">
+      <ion-icon slot="start" name="map"></ion-icon>
+      Locate Position
+    </ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-icon slot="start" name="locate"></ion-icon>
+    <ion-label position="stacked">Address</ion-label>
+    <ion-textarea [(ngModel)]="address" type="text" style="margin-top:20px;"></ion-textarea>
+  </ion-item>
+  <ion-button shape="round" expand="block" (click)="confirmPickupLocation()">Confirm Pickup Location</ion-button>
+  <div id="mapId" style="height:200px"></div> -->
+</ion-content>

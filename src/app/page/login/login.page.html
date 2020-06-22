@@ -1,0 +1,28 @@
+<mat-card class="login">
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="doLogin()" class="form">
+      <h2>Login</h2>
+      <mat-error *ngIf="loginInvalid">
+        El usuario y contraseña no estan registrados
+      </mat-error>
+      <mat-form-field class="full-width-input">
+        <mat-label>Usuario:</mat-label>
+        <input matInput required type="email" placeholder="Email" formControlName="username">
+        <mat-error>
+          Por favor, ingrese un usuario correcto (formato de email)
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Contraseña:</mat-label>
+        <input matInput required type="password" placeholder="Password" formControlName="password">
+        <mat-error>
+          Porfavor, ingrese una contraseña correcta.
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Iniciar sesión</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<!-- TEST  SIDE NAV -->
+<!-- <app-side-nav></app-side-nav>  -->
