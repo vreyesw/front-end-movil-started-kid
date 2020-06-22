@@ -37,9 +37,14 @@ ionic cordova platform add ios
 ng add @angular/material
 ng generate module app-material --flat
 
+reference:
+- https://ionicframework.com/docs/angular/overview
+- https://material.angular.io/components/categories
+
 # Geo-movil add login
 
 ng generate page login
+reference: https://developer.okta.com/blog/2020/01/21/angular-material-login
 
 # Geo-movil add leaflet and geocoder
 
@@ -50,6 +55,9 @@ ionic cordova plugin add cordova-plugin-nativegeocoder
 npm install @ionic-native/native-geocoder
 
 ng generate page view-map
+reference: 
+- https://leafletjs.com/examples/mobile/
+- https://medium.com/@bviveksingh96/using-leaflet-with-ionic-4-f7acbd1c2464
 
 # Geo-movil add storage
 
@@ -62,3 +70,8 @@ ionic cordova plugin add cordova-plugin-android-permissions
 npm install @ionic-native/android-permissions
 
 Note: it's necessary to review AndroidManifest.xml because on some occasions duplicate user permissions(geo-movil\platforms\android\app\src\main\AndroidManifest.xml) after build apk
+
+# Component 
+
+
+ReactiveFormsModule
